@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val image: ImageView = findViewById(R.id.picture)
         val clickMe: Button = findViewById(R.id.ClickMe)
         val firstPageText: TextView = findViewById(R.id.first_page_text)
