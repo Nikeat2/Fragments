@@ -16,7 +16,7 @@ class FirstFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
-    companion object {
+    companion object FragmentOne {
 
         @JvmStatic
         fun newInstance() = FirstFragment()

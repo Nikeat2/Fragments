@@ -1,21 +1,35 @@
 package com.example.fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ReportFragment.Companion.reportFragment
 
 var TAG: String = "SomeSpecialName ${MainActivity::class.java.simpleName}"
 
 
 class SecondActivity : AppCompatActivity() {
+
+    val buttonToStartFragment: Button = findViewById(R.id.button_to_start_fragment)
+
+   fun goToFragment(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction().replace(R.id.fragment_home, fragment).commit()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        supportFragmentManager
-            .beginTransaction().replace(R.id.fragment_home, FirstFragment())
+
+        buttonToStartFragment.setOnClickListener {
+            goToFragment(Fragment())
+        }
 
 
     }
+
     override fun onStart() {
         super.onStart()
         Log.d(TAG, "In onStart")

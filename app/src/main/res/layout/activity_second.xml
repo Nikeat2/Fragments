@@ -19,4 +19,26 @@
         app:layout_constraintVertical_bias="0.0">
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/button_to_start_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:shadowColor="#A82626"
+        android:text="Click to start a fragment"
+        android:textColor="#EAE4E4"
+        android:textColorHighlight="#B50B0B"
+        android:textColorHint="#AF8686"
+        android:textColorLink="#982222"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_home"
+        app:layout_constraintVertical_bias="0.873"
+        app:rippleColor="#8C2D2D"
+        app:strokeColor="#AE1F1F">
+
+    </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,12 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".FirstFragment"
+    android:background="@color/design_default_color_secondary_variant">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:shadowColor="@color/design_default_color_on_secondary"
+        android:text="That's the first fragment I've ever made"
+        android:textSize="20sp"
+        android:visibility="visible"
+        android:gravity="center"
+        android:textColor="?android:attr/windowBackgroundFallback"
+        tools:ignore="ExtraText" />
 
 </FrameLayout>
