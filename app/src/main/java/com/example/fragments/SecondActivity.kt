@@ -5,30 +5,19 @@ import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
 
 var TAG: String = "SomeSpecialName ${MainActivity::class.java.simpleName}"
 
 
 class SecondActivity : AppCompatActivity() {
 
-    val buttonToStartFragment: Button = findViewById(R.id.button_to_start_fragment)
 
-   fun goToFragment(fragment: Fragment) {
-        supportFragmentManager
-            .beginTransaction().replace(R.id.fragment_home, fragment).commit()
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-
-        buttonToStartFragment.setOnClickListener {
-            goToFragment(Fragment())
         }
 
-
-    }
 
     override fun onStart() {
         super.onStart()
@@ -39,6 +28,15 @@ class SecondActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "In onResume")
+
+        val button2: Button = findViewById(R.id.button_to_start_fragment)
+
+        fun goToFragment(fragment: Fragment) {
+            supportFragmentManager
+                .beginTransaction().replace(R.id.fragment_home, FirstFragment.newInstance()).commit()
+        }
+            button2.setOnClickListener { goToFragment(Fragment()) }
+
     }
 
     override fun onPause() {

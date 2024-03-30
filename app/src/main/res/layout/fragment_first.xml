@@ -10,12 +10,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:shadowColor="@color/design_default_color_on_secondary"
         android:text="That's the first fragment I've ever made"
+        android:textColor="?android:attr/windowBackgroundFallback"
         android:textSize="20sp"
         android:visibility="visible"
-        android:gravity="center"
-        android:textColor="?android:attr/windowBackgroundFallback"
-        tools:ignore="ExtraText" />
+        tools:ignore="ExtraText"
+        tools:visibility="visible" />
 
 </FrameLayout>
