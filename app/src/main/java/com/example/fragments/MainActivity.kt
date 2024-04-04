@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-         goToFragment(fragment = Fragment())
+        goToFragment(fragment = Fragment())
     }
 
 }
