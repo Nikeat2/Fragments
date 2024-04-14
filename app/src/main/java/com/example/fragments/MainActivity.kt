@@ -4,11 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
 
-
+lateinit var userTextView: TextView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         fun goToFragment(fragment: Fragment) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.Fragment_place, FirstFragment.newInstance()).commit()
+                .replace(R.id.Fragment_place, FirstFragment.newInstance()). commit()
 
         }
 
@@ -34,13 +35,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         myButton.setOnClickListener {
-            intent.putExtra("Text", userText.toString())
             goToSecondFragment(fragment = Fragment())
         }
 
 
 
         goToFragment(fragment = Fragment())
+
+
 
 
     }
