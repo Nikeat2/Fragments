@@ -13,13 +13,16 @@ class SecondFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
     }
-
+    var userTextView = R.id.User_textview
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second, container, false)
     }
+
+
+
 
     companion object FragmentOne {
 

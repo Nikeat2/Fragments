@@ -21,6 +21,17 @@
 
     </TextView>
 
+    <TextView
+        android:id="@+id/User_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="What the fuck, G"
+        android:textColor="?attr/colorOnPrimaryContainer"
+        android:textSize="40sp" />
+
 
 </FrameLayout>
 
