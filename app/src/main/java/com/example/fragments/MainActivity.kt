@@ -8,17 +8,16 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
+import com.example.fragments.R.id.button_to_fragment
 
 lateinit var userTextView: TextView
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Communicator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val fragmentHolder = findViewById<FragmentContainerView>(R.id.Fragment_place)
-        val myButton: Button = findViewById(R.id.button_to_fragment)
-
-        val intent = Intent()
+        val myButton: Button = findViewById(button_to_fragment)
 
 
 
@@ -36,6 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         myButton.setOnClickListener {
             goToSecondFragment(fragment = Fragment())
+
+
         }
 
 
@@ -45,6 +46,18 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    override fun passDataCom(editTextInput: String) {
+val bundle = Bundle()
+        bundle.putString("message", editTextInput)
+
+        val transaction = this.supportFragmentManager.beginTransaction()
+        val secondFragment = SecondFragment()
+        secondFragment.arguments = bundle
+
+        transaction.replace(R.id.Fragment_place, secondFragment)
+        transaction.commit()
     }
 
 }
