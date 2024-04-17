@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 private lateinit var userText: EditText
 
 class FirstFragment : Fragment() {
-    var userText = view?.findViewById<EditText>(R.id.User_text)
+
 
     private lateinit var communicator: Communicator
 
@@ -25,6 +25,8 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_first, container, false)
+
+        var userText = view?.findViewById<EditText>(R.id.User_text)
 
         val buttonToText: Button = view.findViewById(R.id.btn)
 

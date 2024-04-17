@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentContainerView
 import com.example.fragments.R.id.button_to_fragment
 
 lateinit var userTextView: TextView
+
 class MainActivity : AppCompatActivity(), Communicator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,11 +21,9 @@ class MainActivity : AppCompatActivity(), Communicator {
         val myButton: Button = findViewById(button_to_fragment)
 
 
-
-
         fun goToFragment(fragment: Fragment) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.Fragment_place, FirstFragment.newInstance()). commit()
+                .replace(R.id.Fragment_place, FirstFragment.newInstance()).commit()
 
         }
 
@@ -44,12 +43,10 @@ class MainActivity : AppCompatActivity(), Communicator {
         goToFragment(fragment = Fragment())
 
 
-
-
     }
 
     override fun passDataCom(editTextInput: String) {
-val bundle = Bundle()
+        val bundle = Bundle()
         bundle.putString("message", editTextInput)
 
         val transaction = this.supportFragmentManager.beginTransaction()
