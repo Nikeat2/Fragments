@@ -2,4 +2,6 @@
     <string name="app_name">Fragments</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_the_app">Welcome to the app</string>
+    <string name="click_me">Click me</string>
 </resources>
