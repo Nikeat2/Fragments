@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 
 class FirstFragment : Fragment() {
 
-
+// лишняя строка
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -16,7 +16,7 @@ class FirstFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
-    companion object FragmentOne {
+    companion object FragmentOne {  // название можно опускать 
 
         @JvmStatic
         fun newInstance() = FirstFragment()
