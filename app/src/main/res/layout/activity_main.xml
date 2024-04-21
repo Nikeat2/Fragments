@@ -10,26 +10,27 @@
         android:id="@+id/first_page_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the App."
+        android:text="Welcome to the App."   // текст учимся выносить в стринги (если что студия подсвечивает и делает это почти автоматически) 
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.47"   // зачем такое спецефическое отклонение?
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintVertical_bias="0.068" />  // зачем такое спецефическое отклонение?
 
     <Button
-        android:id="@+id/ClickMe"
+        android:id="@+id/ClickMe"   // плохой стил названия, обычно с большой буквы не начинают. Посмотри про CamelCase, SnakeCase и прочие стили текста. Обчыно выбирают или одно или другое, но тогда нужно это придерживаться 
+        // в течение всего текста, например выше android:id="@+id/first_page_text" ты пишешь одним стилем, а тут другим.  В будущем будем использовать camelCase - clickMe, firstPageText и т.д соответственно везде приведи к стилю.
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click me"
+        android:text="Click me"                             // текст в стринги
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.498"     // опять специф отклонение
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintVertical_bias="0.222" />   // опять специф отклонение
 
     <ImageView
         android:id="@+id/picture"
