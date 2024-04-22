@@ -7,18 +7,16 @@ import androidx.fragment.app.FragmentContainerView
 
 
 class MainActivity : AppCompatActivity() {
+    fun goToFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentPlace, FirstFragment.newInstance()).commit()
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val fragmentHolder = findViewById<FragmentContainerView>(R.id.Fragment_place)
-
-
-        fun goToFragment(fragment: Fragment) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.Fragment_place, FirstFragment.newInstance()).commit()
-
-        }
+        
 
         goToFragment(fragment = Fragment())
     }
