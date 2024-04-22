@@ -9,6 +9,7 @@ import android.view.ViewGroup
 
 class SecondFragment : Fragment() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
