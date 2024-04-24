@@ -1,10 +1,10 @@
 package com.example.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 
 
 class SecondFragment : Fragment() {
@@ -19,10 +19,12 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        val view = inflater.inflate(R.layout.fragment_second, container, false)
+
+        return view
     }
 
-    companion object FragmentOne {
+    companion object {
 
         @JvmStatic
         fun newInstance() = SecondFragment()

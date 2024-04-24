@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.findViewTreeViewModelStoreOwner
-import androidx.navigation.Navigation
 
 class FirstFragment : Fragment() {
 
@@ -16,21 +14,24 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
 
-        val buttonToSecondFragment: Button? = view?.findViewById(R.id.buttonToSecondFragment)
-
 
         val view = inflater.inflate(R.layout.fragment_first, container, false)
 
-        buttonToSecondFragment?.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_secondFragment)
+        val buttonToSecondFragment: Button = view.findViewById(R.id.buttonToSecondFragment)
+
+        buttonToSecondFragment.setOnClickListener {
+            val secondFragment = SecondFragment()
+            fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragmentContainerView, secondFragment)
+                ?.commit()
         }
 
         return view
     }
 
-    companion object FragmentOne {
+    companion object {
 
         @JvmStatic
-        fun newInstance() = FirstFragment()
+        fun newInstance() = SecondFragment()
     }
 }
