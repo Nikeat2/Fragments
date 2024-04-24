@@ -13,6 +13,17 @@ import com.example.fragments.R.id.button_to_fragment
 lateinit var userTextView: TextView
 
 class MainActivity : AppCompatActivity(), Communicator {
+
+    fun goToFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.Fragment_place, FirstFragment.newInstance()).commit()
+
+    }
+
+    fun goToSecondFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.Fragment_place, SecondFragment.newInstance()).commit()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,20 +32,10 @@ class MainActivity : AppCompatActivity(), Communicator {
         val myButton: Button = findViewById(button_to_fragment)
 
 
-        fun goToFragment(fragment: Fragment) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.Fragment_place, FirstFragment.newInstance()).commit()
 
-        }
-
-        fun goToSecondFragment(fragment: Fragment) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.Fragment_place, SecondFragment.newInstance()).commit()
-        }
 
         myButton.setOnClickListener {
             goToSecondFragment(fragment = Fragment())
-
 
         }
 
