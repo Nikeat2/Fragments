@@ -7,18 +7,15 @@ import androidx.fragment.app.FragmentContainerView
 
 
 class MainActivity : AppCompatActivity() {
-    fun goToFragment(fragment: Fragment) {
+    private fun goToFragment() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentPlace, FirstFragment.newInstance()).commit()
-
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        goToFragment(fragment = Fragment())
+        goToFragment()
     }
 
 }
