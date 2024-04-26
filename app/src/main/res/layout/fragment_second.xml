@@ -5,9 +5,8 @@
     android:id="@+id/second_fragment_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_primary70"
+    android:background="@color/nice"
     tools:context=".SecondFragment">
-
 
     <TextView
         android:layout_width="match_parent"
@@ -21,9 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </TextView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
