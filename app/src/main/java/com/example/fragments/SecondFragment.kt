@@ -9,18 +9,6 @@ import androidx.fragment.app.Fragment
 
 
 class SecondFragment : Fragment() {
-
-    var userTextView: String? = ""
-
-    val userText: TextView? = view?.findViewById(R.id.userTextView)
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -33,12 +21,5 @@ class SecondFragment : Fragment() {
         textView.text = inputData.toString()
 
         return view
-    }
-
-
-    companion object FragmentOne {
-
-        @JvmStatic
-        fun newInstance() = SecondFragment()
     }
 }

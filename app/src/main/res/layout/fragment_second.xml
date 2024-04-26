@@ -4,7 +4,7 @@
     android:id="@+id/second_fragment_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_primary70"
+    android:background = "@color/nice"
     tools:context=".SecondFragment">
 
 
@@ -12,25 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="That's a bit harder than I thought"
+        android:text="@string/that_s_a_bit_harder_than_i_thought"
         android:textColor="@color/white"
         android:textSize="35sp"
-        android:textStyle="bold"
-
-        >
-
+        android:textStyle="bold">
     </TextView>
 
     <TextView
         android:id="@+id/userTextView"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="75dp"
         android:gravity="center"
-        android:textColor="?attr/colorOnPrimaryContainer"
+        android:textColor="@color/white"
         android:textSize="40sp" />
-
-
 </FrameLayout>
 
